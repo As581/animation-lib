@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+h1, p {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideLeft 1s forwards ease-in-out;
+}
+
+p {
+    transform: translateY(-100%);
+    animation: slideTop 1.2s forwards ease-in-out;
+}
+
+/* X-axis animation */
+@keyframes slideLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Y-axis animation */
+@keyframes slideTop {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
